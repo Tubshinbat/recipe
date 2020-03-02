@@ -13,7 +13,7 @@ export default class Search {
             return this.result;
 
         } catch (error) {
-            console.log('error: ' + error);
+            console.log('асуудал гарлаа: ' + error);
         }
     }
 
