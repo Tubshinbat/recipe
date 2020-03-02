@@ -1,9 +1,11 @@
-const arr = [23, 44, 12]
+// fetch()
+// axios API серверээс татах боломжтой.
 
-let myFunction = a => {
-    console.log(`too : ${a}`);
-}
+require("@babel/polyfill");
+import Search from "./model/Search";
 
-const arr2 = [...arr, 44, 122];
 
-myFunction(arr2[1]);
+
+let search = new Search('pasta');
+
+search.doSearch().then(r => console.log(r));
