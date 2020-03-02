@@ -5,6 +5,7 @@ require("@babel/polyfill");
 import Search from "./model/Search";
 import { elements, renderLoader, clearLoader } from "./view/base";
 import * as searchView from "./view/searchView";
+import Recipe from './model/Recipe';
 
 /**
  *  Web app төлөв
@@ -40,3 +41,17 @@ elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
 });
+
+elements.pageButtons.addEventListener('click', e => {
+    const btn = e.target.closest('.btn-inline');
+    // closest функц ямар нэгэн element-тэй хамгийн ойр DOM target-ыг хайж олно
+
+    if (btn) {
+        const gotoPageNumber = parseInt(btn.dataset.goto, 10);
+        searchView.clearSearchResult();
+        searchView.renderRecipes(state.search.result, gotoPageNumber);
+    }
+});
+
+const r = new Recipe(47746);
+r.getRecipe();
