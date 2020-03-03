@@ -1,15 +1,6 @@
 import { elements } from "./base";
 
 const renderRecipe = recipe => {
-    // console.log(recipe);
-
-    // publisher: "Simply Recipes"
-    // title: "How to Grill Pizza"
-    // source_url: "http://www.simplyrecipes.com/recipes/how_to_grill_pizza/"
-    // recipe_id: "36476"
-    // image_url: "http://forkify-api.herokuapp.com/images/howtogrillpizzad300x20086a60e1b.jpg"
-    // social_rank: 99.99999704095504
-    // publisher_url: "http://simplyrecipes.com"
 
     const markup = `
     <li>

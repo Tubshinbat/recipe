@@ -9,8 +9,6 @@ export default class Recipe {
             "https://forkify-api.herokuapp.com/api/get?rId=" + this.id
         );
 
-
-
         this.publisher = result.data.recipe.publisher;
         this.ingredients = result.data.recipe.ingredients;
         this.source_url = result.data.recipe.source_url;
@@ -19,8 +17,14 @@ export default class Recipe {
         this.title = result.data.recipe.title;
         this.social_rank = result.data.recipe.social_rank;
 
-        console.log(this.title);
-        console.log(this.ingredients);
+    }
+    calcTime() {
+        // Найрлага бүрт ойролцоогоор 5 минут зарцуулна
+        this.time = this.ingredients.length * 5;
+    }
+
+    calcHuniiToo() {
+        this.huniiToo = 4;
     }
 
 }
